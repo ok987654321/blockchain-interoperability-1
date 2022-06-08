@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Web3 from 'web3'
@@ -180,10 +181,10 @@ class WithdrawHTLC extends Component {
       if (network === "Shasta Test") {
         return 150 //Shasta Test, to be changed
       }
-      else if (network == "TronGrid Main") {
+      else if (network === "TronGrid Main") {
         return 150 //TronGrid Main, to be changed
       }
-      else if (network == "TronStack Main") {
+      else if (network === "TronStack Main") {
         return 150 //TronStack Main, to be changed
       }
     }
@@ -206,6 +207,7 @@ class WithdrawHTLC extends Component {
     }
 
     if (this.state.chain === "Ethereum") {
+      // eslint-disable-next-line no-unused-vars
       const acc = await window.web3.eth.getAccounts()
       this.state.htlc.methods.getStatusDetails(transactionId).call({ from: this.state.account }).then(result => {
         this.details = result;
@@ -295,10 +297,10 @@ class WithdrawHTLC extends Component {
       if (this.state.networkId === 101) {
         return "Shasta Test"
       }
-      else if (this.state.networkId == 2) {
+      else if (this.state.networkId === 2) {
         return "TronGrid Main"
       }
-      else if (this.state.networkId == 3) {
+      else if (this.state.networkId === 3) {
         return "TronStack Main"
       }
 

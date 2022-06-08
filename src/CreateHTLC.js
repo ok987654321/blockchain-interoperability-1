@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Web3 from 'web3'
@@ -197,10 +198,10 @@ class CreateHTLC extends Component {
       if (network === "Shasta Test") {
         return 150 //Shasta Test, to be changed
       }
-      else if (network == "TronGrid Main") {
+      else if (network === "TronGrid Main") {
         return 150 //TronGrid Main, to be changed
       }
-      else if (network == "TronStack Main") {
+      else if (network === "TronStack Main") {
         return 150 //TronStack Main, to be changed
       }
     }
@@ -280,7 +281,7 @@ class CreateHTLC extends Component {
     }
 
     if (secretHash.length === 66 && secretHash[0] === '0' && secretHash[1] === 'x') {
-      for (var i = 2; i < 64; i++) {
+      for (i = 2; i < 64; i++) {
         if (!((secretHash[i] >= '0' && secretHash[i] <= '9') || (secretHash[i] >= 'a' && secretHash[i] <= 'f') || (secretHash[i] >= 'A' && secretHash[i] <= 'F'))) {
           window.alert("Invalid Secret Hash Entered")
           this.setState({ loading: false })
@@ -363,10 +364,10 @@ class CreateHTLC extends Component {
       if (this.state.networkId === 101) {
         return "Shasta Test"
       }
-      else if (this.state.networkId == 2) {
+      else if (this.state.networkId === 2) {
         return "TronGrid Main"
       }
-      else if (this.state.networkId == 3) {
+      else if (this.state.networkId === 3) {
         return "TronStack Main"
       }
 
@@ -400,7 +401,7 @@ class CreateHTLC extends Component {
 
   getNetworkOptions(chain) {
     const selectEle = document.getElementById("receiverNetwork");
-    while (selectEle.options.length != 1) {
+    while (selectEle.options.length !== 1) {
       selectEle.remove(selectEle.options.length - 1);
     }
     if (chain === "ETH") {

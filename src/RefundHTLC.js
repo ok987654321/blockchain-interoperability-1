@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Web3 from 'web3'
@@ -13,6 +14,7 @@ import logo from './res/blockchain.svg';
 import bg from './res/doodle_blockchain.jpg'
 import 'reactjs-popup/dist/index.css';
 
+// eslint-disable-next-line no-unused-vars
 function myFunctionKeyShow() {
 
   var x = document.getElementById("secretKey");
@@ -189,10 +191,10 @@ class RefundHTLC extends Component {
       if (this.state.networkId === 101) {
         return "Shasta Test"
       }
-      else if (this.state.networkId == 2) {
+      else if (this.state.networkId === 2) {
         return "TronGrid Main"
       }
-      else if (this.state.networkId == 3) {
+      else if (this.state.networkId === 3) {
         return "TronStack Main"
       }
 

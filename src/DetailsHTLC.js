@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Web3 from 'web3'
@@ -309,10 +311,10 @@ class DetailsHTLC extends Component {
       if (this.state.networkId === 101) {
         return "Shasta Test"
       }
-      else if (this.state.networkId == 2) {
+      else if (this.state.networkId === 2) {
         return "TronGrid Main"
       }
-      else if (this.state.networkId == 3) {
+      else if (this.state.networkId === 3) {
         return "TronStack Main"
       }
 
